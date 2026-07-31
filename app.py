@@ -91,7 +91,7 @@ elif page == "Data Overview":
     )
     cd = img_path("class_distribution.png")
     if cd:
-        st.image(cd, use_column_width=True)
+        st.image(cd, use_container_width=True)
 
     st.subheader("Word Clouds")
     st.write("The most frequent words in positive vs negative reviews — the vocabularies are clearly different.")
@@ -101,15 +101,15 @@ elif page == "Data Overview":
     with col1:
         st.markdown("**Positive reviews**")
         if pos:
-            st.image(pos, use_column_width=True)
+            st.image(pos, use_container_width=True)
     with col2:
         st.markdown("**Negative reviews**")
         if neg:
-            st.image(neg, use_column_width=True)
+            st.image(neg, use_container_width=True)
 
     combined = img_path("wordclouds.png")
     if not (pos and neg) and combined:
-        st.image(combined, use_column_width=True)
+        st.image(combined, use_container_width=True)
 
 # ===================== SENTIMENT PREDICTOR =====================
 elif page == "Sentiment Predictor":
